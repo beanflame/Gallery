@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Img Test</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+        <!-- JS -->
+        <script src="./js/lazy-load.min.js"></script>
+        
+        <div id="vue.apps" class="vue-app">
+            <template>
+                <ul id='img'>
+                    <li class="in" v-for="(item,i) in imgs" :key="i">
+                        <img src="#" alt="图片" v-view-lazy="item.src"/>
+                    </li>
+                </ul>
+            </template>
+        </div>
+
+        <script>
+            export default {
+                data() {
+                    return {
+                        imgs:[
+                            {src:'balabala'}
+                        ]
+                    }
+                },
+                mounted(){
+                },
+            }
+        </script>
+
+
+    </body>
+</html>

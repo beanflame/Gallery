@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>VueLearn-cnblogs/xpwi</title>
+		<!--引入自定义的样式-->
+		<!--<link rel="stylesheet" href="css/style.css" />-->
+		<!--引入 vue 核心 js-->
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		
+	</head>
+	<body>
+		
+		<!--vue-app 是根容器，定义一个 id，然后在 js 里操作-->
+		<div id="vue-app">
+			
+			<h2> v-for </h2>
+			
+			<!--1.数组下标直接获取
+			{{nameList[1]}}-->
+			
+			<!--2.使用 v-for 遍历-->
+			<!--<ul>
+				<li v-for="i in nameList">{{i}}</li>
+			</ul>-->
+			
+			<!--3.拿 json 数据-->
+			<!--<ul>
+				<li v-for="(i,n) in users">第{{n}}名：{{i.name}}-{{i.age}}</li>
+			</ul>-->
+			
+			<!--4.template-->
+			<template v-for="(i,n) in users">
+				<h3>获奖者：{{n+1}}</h3>
+				<p>{{i.name}}</p>
+				<span>他的年龄是{{i.age}}</span>
+			</template>
+			
+		</div>
+		
+		<!--引入自己的 js，注意必须写在 body 标签里最后，因为必须先加载你的整个 HTML DOM，才回去执行 vue 实例-->
+		<script type="text/javascript" src="js/vfor.js" ></script>
+	</body>
+</html>
